@@ -57,9 +57,14 @@ I promise good vibes, warm smiles, and just a little romance.</p>
             <button onClick={handleYes} style={styles.yes}>
               Yes 💖
             </button>
-            <button style={{ ...styles.no, ...noStyle }} onMouseEnter={moveNoButton}>
-              No 🙃
-            </button>
+           <button
+  style={{ ...styles.no, ...noStyle }}
+  onMouseEnter={moveNoButton}   // desktop hover
+  onTouchStart={moveNoButton}   // mobile touch
+>
+  No 🙃
+</button>
+
           </div>
         </section>
       ) : (
@@ -127,16 +132,17 @@ const styles = {
     borderRadius: "999px",
     cursor: "pointer",
   },
-  no: {
-    padding: "14px 30px",
-    fontSize: "1.2rem",
-    backgroundColor: "#adb5bd",
-    color: "#fff",
-    border: "none",
-    borderRadius: "999px",
-    cursor: "pointer",
-    transition: "0.25s ease",
-  },
+ no: {
+  padding: "14px 30px",
+  fontSize: "1.2rem",
+  backgroundColor: "#adb5bd",
+  color: "#fff",
+  border: "none",
+  borderRadius: "999px",
+  cursor: "pointer",
+  transition: "transform 0.35s ease-in-out", // smooth movement
+},
+
   successTitle: { fontSize: "2.6rem", marginBottom: "12px" },
   successText: { fontSize: "1.2rem", color: "#444" },
 };
