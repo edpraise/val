@@ -53,10 +53,14 @@ export default function App() {
 
       {!yesClicked ? (
         <section style={styles.card}>
-          <h1 style={styles.title}>Hi {name} ❤️</h1>
+          <h1 style={styles.title}>Hi my pretty {name} ❤️</h1>
 
           <p style={styles.text}>
-            I have something special to ask you…
+            I’ve been smiling every time I think of you, and I realized something…
+Valentine’s Day wouldn’t feel right without asking you this.
+So here it is, straight from my heart 
+will you be my Valentine? 🌹
+No pressure, just a whole lot of feelings 😊 and a little romance
           </p>
 
           <h2 style={styles.question}>
